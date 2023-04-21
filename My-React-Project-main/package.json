@@ -1,0 +1,45 @@
+{
+  "name": "numer2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "dev:only": "vite dev --host",
+  "forwardPorts": "[5173]",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.12",
+    "@mui/styled-engine-sc": "^5.11.11",
+    "@mui/system": "^5.11.12",
+    "axios": "^1.3.5",
+    "chart.js": "^4.2.1",
+    "jsonwebtoken": "^9.0.0",
+    "mathjs": "^11.6.0",
+    "plotly.js": "^2.19.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-plotly.js": "^2.6.0",
+    "react-plotlyjs": "^0.4.4",
+    "react-router-dom": "^6.9.0",
+    "react-virtuoso": "^4.1.0",
+    "recharts": "^2.4.3",
+    "styled-components": "^5.3.8"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "jsdom": "^21.1.1",
+    "vite": "^4.1.0",
+    "vitest": "^0.30.1"
+  }
+}

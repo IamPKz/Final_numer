@@ -1,0 +1,51 @@
+version: '3.8'  # optional since v1.27.0
+services:
+  db:
+    image: mysql
+    container_name: mysql-server
+    restart : always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: 439632
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+  php:
+    image: phpmyadmin
+    container_name: phpmyadmin-management
+    restart : always
+    environment:
+      PMA_HOST : db
+      MYSQL_ROOT_PASSWORD: 439632
+    ports:
+      - '80:80'
+    expose:
+      - '80'
+
+  web:
+    image: front
+    container_name: web-front-end
+    restart : always
+
+    ports:
+      - '5173:5173'
+    expose:
+      - '5173'
+
+  api:
+    image: api
+    container_name: web-api
+    restart : always
+    depends_on:
+      - db
+    ports:
+      - '3000:3000'
+    expose:
+      - '3000'
+
+# Names our volume
+volumes:
+  my-db:
