@@ -24,4 +24,19 @@ jobs:
         cd My-React-Project-main
         npm i
         npm test
+        
+  #API
+    - run: |
+        cd My-React-Project-main
+        docker build -t front .        
+    - run: |
+        cd API_mysql-main
+        docker build -t api .
+    - run: |
+        docker pull mysql
+        docker pull phpmyadmin
+    - run: |
+        cd My-React-Project-main
+        docker-compose up -d
+        docker-compose down
     
