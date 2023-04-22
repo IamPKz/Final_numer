@@ -37,6 +37,6 @@ jobs:
         docker pull phpmyadmin
     - run: |
         cd My-React-Project-main
-        docker-compose up build
+        docker-compose build
         docker-compose down
     
